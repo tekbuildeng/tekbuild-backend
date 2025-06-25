@@ -2,6 +2,7 @@ import Fastify from "fastify";
 import AutoLoad, { AutoloadPluginOptions } from "@fastify/autoload";
 import { join } from "path";
 import { ZodTypeProvider } from "fastify-type-provider-zod";
+import serverless from "serverless-http";
 
 const fastify = Fastify().withTypeProvider<ZodTypeProvider>();
 
@@ -19,7 +20,11 @@ fastify.register(AutoLoad, {
   options: pluginOptions,
 });
 
+// Cast fastify to 'any' to satisfy serverless-http type requirements
+module.exports.handler = serverless(fastify as any);
+
 // localhost || ::
+/* 
 fastify.listen(
   { port: Number(process.env.PORT) || 3000, host: "::" },
   (err, address) => {
@@ -30,3 +35,4 @@ fastify.listen(
     console.log(`🦊 Fastify is running at ${address}`);
   }
 );
+*/
