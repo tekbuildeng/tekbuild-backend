@@ -11,6 +11,9 @@ importers:
       '@fastify/autoload':
         specifier: ^6.0.1
         version: 6.3.1
+      '@fastify/aws-lambda':
+        specifier: ^5.1.4
+        version: 5.1.4
       '@fastify/cors':
         specifier: ^11.0.1
         version: 11.0.1
@@ -38,9 +41,6 @@ importers:
       nodemailer:
         specifier: ^7.0.3
         version: 7.0.3
-      serverless-http:
-        specifier: ^3.2.0
-        version: 3.2.0
       ts-node:
         specifier: ^10.9.2
         version: 10.9.2(@types/node@22.15.33)(typescript@5.8.3)
@@ -78,6 +78,9 @@ packages:
 
   '@fastify/autoload@6.3.1':
     resolution: {integrity: sha512-0fsG+lO3m5yEZVjXKpltCe+2eHhM6rfAPQhvlGUgLUFTw/N2wA9WqPTObMtrF3oUCUrxbSDv60HlUIoh+aFM1A==}
+
+  '@fastify/aws-lambda@5.1.4':
+    resolution: {integrity: sha512-ExyaFMcEJXyUnYktzs5ww/5iDI8LcXMiIMnYZW6aavSIu+W0d08bJhvw8ShHL9wsRrRvfH+BOLdUEVB8oQ4Rew==}
 
   '@fastify/cors@11.0.1':
     resolution: {integrity: sha512-dmZaE7M1f4SM8ZZuk5RhSsDJ+ezTgI7v3HHRj8Ow9CneczsPLZV6+2j2uwdaSLn8zhTv6QV0F4ZRcqdalGx1pQ==}
@@ -552,10 +555,6 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
-  serverless-http@3.2.0:
-    resolution: {integrity: sha512-QvSyZXljRLIGqwcJ4xsKJXwkZnAVkse1OajepxfjkBXV0BMvRS5R546Z4kCBI8IygDzkQY0foNPC/rnipaE9pQ==}
-    engines: {node: '>=12.0'}
-
   set-cookie-parser@2.7.1:
     resolution: {integrity: sha512-IOc8uWeOZgnb3ptbCURJWNjWUPcO3ZnTTdzsurqERrP6nPyv+paC55vJM0LpOlT2ne+Ix+9+CRG1MNLlyZ4GjQ==}
 
@@ -704,6 +703,8 @@ snapshots:
       fast-uri: 3.0.6
 
   '@fastify/autoload@6.3.1': {}
+
+  '@fastify/aws-lambda@5.1.4': {}
 
   '@fastify/cors@11.0.1':
     dependencies:
@@ -1180,8 +1181,6 @@ snapshots:
   secure-json-parse@4.0.0: {}
 
   semver@7.7.2: {}
-
-  serverless-http@3.2.0: {}
 
   set-cookie-parser@2.7.1: {}
 
