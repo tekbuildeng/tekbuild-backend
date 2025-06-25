@@ -38,7 +38,7 @@ const email: FastifyPluginAsync = async (fastify: FastifyTypedInstance) => {
         const transporter = await getMailClient();
         const info = await transporter.sendMail({
           from: `"TekBuild Engenharia" <${process.env.NAO_RESPONDER_EMAIL}>`,
-          to: `heikon100.segunda@gmail.com`,
+          to: `contato@tekbuild-engenharia.com.br`,
           subject,
           text,
         });
