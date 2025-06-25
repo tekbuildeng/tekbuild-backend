@@ -1,3 +1,4 @@
+/* 
 import fp from 'fastify-plugin'
 
 export interface SupportPluginOptions {
@@ -17,4 +18,5 @@ declare module 'fastify' {
   export interface FastifyInstance {
     someSupport(): string;
   }
-}
+} 
+*/
